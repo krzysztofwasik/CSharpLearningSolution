@@ -1,0 +1,9 @@
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\bin\Debug\InterfaceTrainingProject.Tests.dll
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\bin\Debug\InterfaceTrainingProject.Tests.pdb
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\bin\Debug\InterfaceTrainingProject.exe
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\bin\Debug\nunit.framework.dll
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\bin\Debug\InterfaceTrainingProject.pdb
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\bin\Debug\nunit.framework.xml
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\obj\Debug\InterfaceTrainingProject.Tests.csprojResolveAssemblyReference.cache
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\obj\Debug\InterfaceTrainingProject.Tests.dll
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject.Tests\obj\Debug\InterfaceTrainingProject.Tests.pdb

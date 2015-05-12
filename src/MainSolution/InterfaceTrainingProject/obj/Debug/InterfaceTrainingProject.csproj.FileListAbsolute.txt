@@ -1,0 +1,5 @@
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject\bin\Debug\InterfaceTrainingProject.exe.config
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject\bin\Debug\InterfaceTrainingProject.exe
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject\bin\Debug\InterfaceTrainingProject.pdb
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject\obj\Debug\InterfaceTrainingProject.exe
+C:\DATA\projects\CSharpLearingSolution\src\MainSolution\InterfaceTrainingProject\obj\Debug\InterfaceTrainingProject.pdb

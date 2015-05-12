@@ -1,7 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtendingExistingInterfaceForService", "ExtendingExistingInterfaceForService\ExtendingExistingInterfaceForService.csproj", "{86C3E662-B70D-4443-B67C-B74134A7FACE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodPatternExample1", "FactoryMethodPatternExample1\FactoryMethodPatternExample1.csproj", "{28D2F464-4343-4344-9764-578CDE9BC7F5}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86C3E662-B70D-4443-B67C-B74134A7FACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86C3E662-B70D-4443-B67C-B74134A7FACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86C3E662-B70D-4443-B67C-B74134A7FACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86C3E662-B70D-4443-B67C-B74134A7FACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D2F464-4343-4344-9764-578CDE9BC7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D2F464-4343-4344-9764-578CDE9BC7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D2F464-4343-4344-9764-578CDE9BC7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D2F464-4343-4344-9764-578CDE9BC7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

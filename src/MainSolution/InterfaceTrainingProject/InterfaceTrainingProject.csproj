@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86C3E662-B70D-4443-B67C-B74134A7FACE}</ProjectGuid>
+    <ProjectGuid>{D26E40C3-522B-4CC4-8D47-559999E6335A}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ExtendingExistingInterfaceForService</RootNamespace>
-    <AssemblyName>ExtendingExistingInterfaceForService</AssemblyName>
+    <RootNamespace>InterfaceTrainingProject</RootNamespace>
+    <AssemblyName>InterfaceTrainingProject</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -34,7 +34,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,12 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\IUserRepository.cs" />
+    <Compile Include="Data\SqlServer\UserRepository.cs" />
+    <Compile Include="Data\Test\TestUserRepository.cs" />
+    <Compile Include="Data\User.cs" />
+    <Compile Include="HandyDandyApplication.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,6 +1,0 @@
-C:\DATA\projects\CSharpLearingSolution\src\MainSolution\FactoryMethodPatternExample1\bin\Debug\FactoryMethodPatternExample1.exe.config
-C:\DATA\projects\CSharpLearingSolution\src\MainSolution\FactoryMethodPatternExample1\bin\Debug\FactoryMethodPatternExample1.exe
-C:\DATA\projects\CSharpLearingSolution\src\MainSolution\FactoryMethodPatternExample1\bin\Debug\FactoryMethodPatternExample1.pdb
-C:\DATA\projects\CSharpLearingSolution\src\MainSolution\FactoryMethodPatternExample1\obj\Debug\FactoryMethodPatternExample1.csprojResolveAssemblyReference.cache
-C:\DATA\projects\CSharpLearingSolution\src\MainSolution\FactoryMethodPatternExample1\obj\Debug\FactoryMethodPatternExample1.exe
-C:\DATA\projects\CSharpLearingSolution\src\MainSolution\FactoryMethodPatternExample1\obj\Debug\FactoryMethodPatternExample1.pdb

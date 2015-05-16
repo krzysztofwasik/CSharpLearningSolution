@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryClassPattern", "Fact
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryClassPattern.Core", "FactoryClassPattern.Core\FactoryClassPattern.Core.csproj", "{E948B726-100F-493C-ABE2-4DA0C1BAAE85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodPattern", "FactoryMethodPattern\FactoryMethodPattern.csproj", "{89F09B98-C110-412A-BA04-8F8EDEE91D17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodPattern.Tests", "FactoryMethodPattern.Tests\FactoryMethodPattern.Tests.csproj", "{8132A258-556D-4DF1-BBF2-691D3E9EA90C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,14 @@ Global
 		{E948B726-100F-493C-ABE2-4DA0C1BAAE85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E948B726-100F-493C-ABE2-4DA0C1BAAE85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E948B726-100F-493C-ABE2-4DA0C1BAAE85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F09B98-C110-412A-BA04-8F8EDEE91D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F09B98-C110-412A-BA04-8F8EDEE91D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F09B98-C110-412A-BA04-8F8EDEE91D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F09B98-C110-412A-BA04-8F8EDEE91D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8132A258-556D-4DF1-BBF2-691D3E9EA90C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8132A258-556D-4DF1-BBF2-691D3E9EA90C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8132A258-556D-4DF1-BBF2-691D3E9EA90C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8132A258-556D-4DF1-BBF2-691D3E9EA90C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

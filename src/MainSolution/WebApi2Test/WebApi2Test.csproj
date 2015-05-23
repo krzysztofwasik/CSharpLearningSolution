@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A1723434-93BE-4905-874A-1225157289AB}</ProjectGuid>
+    <ProjectGuid>{739450AA-9117-46DD-82EC-D9F3A667CEF5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StatsWebService</RootNamespace>
-    <AssemblyName>StatsWebService</AssemblyName>
+    <RootNamespace>WebApi2Test</RootNamespace>
+    <AssemblyName>WebApi2Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -83,46 +83,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\PlayerController.cs" />
-    <Compile Include="DAL\Entities\EntityBase.cs" />
-    <Compile Include="DAL\Entities\Game.cs" />
-    <Compile Include="DAL\Entities\GameEvent.cs" />
-    <Compile Include="DAL\Entities\Player.cs" />
-    <Compile Include="DAL\Entities\ReportingBase.cs" />
-    <Compile Include="DAL\Entities\Team.cs" />
-    <Compile Include="DAL\IStatsService.cs" />
-    <Compile Include="DAL\Repositories\EventRepository.cs" />
-    <Compile Include="DAL\Repositories\GameRepository.cs" />
-    <Compile Include="DAL\Repositories\IRepository.cs" />
-    <Compile Include="DAL\Repositories\PlayerRepository.cs" />
-    <Compile Include="DAL\Repositories\Repository.cs" />
-    <Compile Include="DAL\Repositories\TeamRepository.cs" />
-    <Compile Include="DAL\StatsDbContext.cs" />
-    <Compile Include="DAL\StatsService.cs" />
-    <Compile Include="Filters\ModelValidatorAttribute.cs" />
+    <Compile Include="DAL\AppDbContext.cs" />
+    <Compile Include="DAL\Entities\User.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201505231531437_Initial.cs" />
-    <Compile Include="Migrations\201505231531437_Initial.Designer.cs">
-      <DependentUpon>201505231531437_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201505231506128_Initial.cs" />
+    <Compile Include="Migrations\201505231506128_Initial.Designer.cs">
+      <DependentUpon>201505231506128_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\ModelFactory.cs" />
-    <Compile Include="Models\PlayerModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -132,10 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201505231531437_Initial.resx">
-      <DependentUpon>201505231531437_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201505231506128_Initial.resx">
+      <DependentUpon>201505231506128_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -151,9 +131,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>63022</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:60006/</IISUrl>
+          <IISUrl>http://localhost:50198/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

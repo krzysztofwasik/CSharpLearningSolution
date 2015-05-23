@@ -9,6 +9,11 @@ namespace StatsWebService.DAL
 {
     public class StatsDbContext : DbContext
     {
+        public StatsDbContext()
+            : base("name=DefaultConnection")
+        {
+        }
+        
         public DbSet<Game> Games { get; set; }
         public DbSet<Team> Teams { get; set; }
         public DbSet<Player> Players { get; set; }

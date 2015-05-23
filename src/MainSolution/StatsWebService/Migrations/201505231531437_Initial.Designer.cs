@@ -13,7 +13,7 @@ namespace StatsWebService.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201505220838166_Initial"; }
+            get { return "201505231531437_Initial"; }
         }
         
         string IMigrationMetadata.Source

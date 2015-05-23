@@ -7,6 +7,7 @@ using System.Web.Http;
 using System.Web.Http.ModelBinding;
 using StatsWebService.DAL;
 using StatsWebService.DAL.Entities;
+using StatsWebService.Filters;
 using StatsWebService.Models;
 
 namespace StatsWebService.Controllers
@@ -59,8 +60,13 @@ namespace StatsWebService.Controllers
             }
         }
 
+        [ModelValidator] // Attribute that say that this method has filter validation by class which derives from ActionFilterAttribute
         public IHttpActionResult Post([FromBody] PlayerModel playerModel)
         {
+            // Validation logic is take care of by engine nad framework 
+            // Cons for this solution: for each action method it has to be done
+            //if(!ModelState.IsValid) return BadRequest(ModelState);
+
             var playerEntity = this.modelFactory.Create(playerModel);
             var player = this.service.Players.Insert(playerEntity);
 

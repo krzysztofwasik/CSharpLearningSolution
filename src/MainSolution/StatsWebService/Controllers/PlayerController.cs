@@ -12,33 +12,25 @@ using StatsWebService.Models;
 
 namespace StatsWebService.Controllers
 {
-    public class PlayerController : ApiController
+    public class PlayerController : BaseApiController
     {
-        private IStatsService service;
-        private IModelFactory modelFactory;
-
-        public PlayerController()
+        public PlayerController() : base(new StatsService(), new ModelFactory())
         {
-            this.service = new StatsService();
-            this.modelFactory = new ModelFactory();
         }
 
         public IHttpActionResult Get()
         {
             try
             {
-                var players = this.service.Players.Get();
-                var models = players.Select(this.modelFactory.Create);
+                var players = StatsService.Players.Get();
+                var models = players.Select(ModelFactory.Create);
 
                 return Ok(models);
             }
             catch (Exception ex)
             {
-                // Logging
-#if DEBUG
+                // Do some logging
                 return InternalServerError(ex); // For security purpose do not send entire error message to user
-#endif
-                return InternalServerError();
             }
         }
 
@@ -46,17 +38,14 @@ namespace StatsWebService.Controllers
         {
             try
             {
-                var player = this.service.Players.Get(id);
-                var model = this.modelFactory.Create(player);
+                var player = StatsService.Players.Get(id);
+                var model = ModelFactory.Create(player);
                 return Ok(model);
             }
             catch (Exception ex)
             {
-                // Logging
-#if DEBUG
+                // Do some logging
                 return InternalServerError(ex); // For security purpose do not send entire error message to user
-#endif
-                return InternalServerError();
             }
         }
 
@@ -67,14 +56,51 @@ namespace StatsWebService.Controllers
             // Cons for this solution: for each action method it has to be done
             //if(!ModelState.IsValid) return BadRequest(ModelState);
 
-            var playerEntity = this.modelFactory.Create(playerModel);
-            var player = this.service.Players.Insert(playerEntity);
+            var playerEntity = ModelFactory.Create(playerModel);
+            var player = StatsService.Players.Insert(playerEntity);
 
             // it is bad idea to pass entity to output because of recursion problems in serialization
             // so we have to pass model based on entity
-            var model = this.modelFactory.Create(player);
+            var model = ModelFactory.Create(player);
 
             return Created(string.Format("http://localhost:60006/api/player/{0}", model.PlayerId), model);
+        }
+
+        [ModelValidator]
+        public IHttpActionResult Put([FromBody] PlayerModel playerModel )
+        {
+            try
+            {
+                var playerEntity = ModelFactory.Create(playerModel);
+                var player = StatsService.Players.Update(playerEntity);
+
+                var model = ModelFactory.Create(player);
+
+                return Ok(model);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
+        public IHttpActionResult Delete(int id)
+        {
+            try
+            {
+                var playerEntity = StatsService.Players.Get(id);
+                if (playerEntity != null)
+                {
+                    StatsService.Players.Delete(playerEntity);
+                }
+                else return NotFound();
+
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
     }
 }

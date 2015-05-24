@@ -14,26 +14,32 @@ namespace StatsWebService.DAL
         private Repository<Player> players;
         private Repository<GameEvent> events;
 
+        private StatsDbContext context;
+
+        public StatsService()
+        {
+            context = new StatsDbContext();
+        }
 
         public Repository<Game> Games 
         {
-            get { return this.games ?? (this.games = new GameRepository(new StatsDbContext())); }
+            get { return this.games ?? (this.games = new GameRepository(this.context)); }
         }
 
         public Repository<Team> Teams
         {
-            get { return this.teams ?? (this.teams = new TeamRepository(new StatsDbContext())); }
+            get { return this.teams ?? (this.teams = new TeamRepository(this.context)); }
             
         }
 
         public Repository<Player> Players
         {
-            get { return this.players ?? (this.players = new PlayerRepository(new StatsDbContext())); }
+            get { return this.players ?? (this.players = new PlayerRepository(this.context)); }
         }
 
         public Repository<GameEvent> Events
         {
-            get { return this.events ?? (this.events = new EventRepository(new StatsDbContext())); }
+            get { return this.events ?? (this.events = new EventRepository(this.context)); }
         }
     }
 }

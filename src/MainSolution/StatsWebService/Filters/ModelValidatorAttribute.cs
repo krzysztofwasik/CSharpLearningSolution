@@ -9,14 +9,12 @@ using System.Web.Http.Filters;
 
 namespace StatsWebService.Filters
 {
-    public class ModelValidatorAttribute : ActionFilterAttribute
-    {
-        // This method is called by the ASP.NET MVC framework before the action method is executes
-        public override void OnActionExecuting(HttpActionContext actionContext)
-        {
-            actionContext.Response = actionContext.Request.CreateErrorResponse(HttpStatusCode.BadRequest,
-                actionContext.ModelState);
-        }
+    public class ModelValidatorAttribute : ActionFilterAttribute {
+        public override void OnActionExecuting( HttpActionContext actionContext ) {
+            if ( !actionContext.ModelState.IsValid )
+                actionContext.Response = actionContext.Request.CreateErrorResponse( HttpStatusCode.BadRequest, actionContext.ModelState );
 
+            base.OnActionExecuting( actionContext );
+        }
     }
 }

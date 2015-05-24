@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
+using StatsWebService.DAL;
+using StatsWebService.DAL.Entities;
+using StatsWebService.Filters;
 
 namespace StatsWebService.Models
 {
-    public class PlayerModel
+    public class TeamModel 
     {
-        public int PlayerId { get; set; }
-        [Required]
-        public string FirstName { get; set; }
-        [Required]
-        public string LastName { get; set; }
         public int TeamId { get; set; }
+        
+        [Required]
         public string TeamName { get; set; }
 
-        public string Url { get; set; }
+        public List<PlayerModel> Players { get; set; } 
     }
 }

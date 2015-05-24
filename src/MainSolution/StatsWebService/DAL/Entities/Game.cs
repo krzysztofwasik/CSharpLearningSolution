@@ -10,5 +10,7 @@ namespace StatsWebService.DAL.Entities
         public virtual Team HomeTeam { get; set; }
         public virtual Team AwayTeam { get; set; }
         public DateTime StartTime { get; set; }
+
+        public virtual ICollection<GameEvent> Events { get; set; } 
     }
 }

@@ -89,7 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\PlayerController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="DAL\Entities\EntityBase.cs" />
     <Compile Include="DAL\Entities\Game.cs" />
     <Compile Include="DAL\Entities\GameEvent.cs" />
@@ -113,9 +116,20 @@
     <Compile Include="Migrations\201505231531437_Initial.Designer.cs">
       <DependentUpon>201505231531437_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201505232100474_DatabaseGenerated.cs" />
+    <Compile Include="Migrations\201505232100474_DatabaseGenerated.Designer.cs">
+      <DependentUpon>201505232100474_DatabaseGenerated.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505232220053_AddEventsToGameEntity.cs" />
+    <Compile Include="Migrations\201505232220053_AddEventsToGameEntity.Designer.cs">
+      <DependentUpon>201505232220053_AddEventsToGameEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\GameEventModel.cs" />
+    <Compile Include="Models\GameModel.cs" />
     <Compile Include="Models\ModelFactory.cs" />
     <Compile Include="Models\PlayerModel.cs" />
+    <Compile Include="Models\TeamModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceTests.cs" />
   </ItemGroup>
@@ -136,6 +150,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505231531437_Initial.resx">
       <DependentUpon>201505231531437_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505232100474_DatabaseGenerated.resx">
+      <DependentUpon>201505232100474_DatabaseGenerated.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505232220053_AddEventsToGameEntity.resx">
+      <DependentUpon>201505232220053_AddEventsToGameEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
